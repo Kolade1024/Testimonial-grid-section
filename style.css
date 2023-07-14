@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed");
+
+:root{
+    /* COLORS */
+    --MN_BG:hsl(210, 46%, 95%)
+;
+    --BG1:hsl(263, 55%, 52%);
+    --BG2:hsl(217, 19%, 35%);
+    --BG3:hsl(0, 0%, 100%);
+    --BG4:hsl(219, 29%, 14%);
+    --TXT:hsl(0, 0%, 81%);
+    --TXT2: hsl(210, 46%, 95%);
+
+    /* FONTS */
+    --FS:13px;
+    --FF:"Barlow Semi Condensed";
+    --FW1:500;
+    --FW2:600;
+}
+
+body{   
+    background-color: var(--MN_BG);
+    font-family: var(--FF);
+}
+
+.container,.child{
+    display:grid;
+    place-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+
+.child{
+    width: 100%;
+    background-color: var(--BG4);
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.testimonial_1{
+    background-color: var(--BG1);
+    position: relative;
+}
+.testimonial_2{
+    background-color: var(--BG2);
+}
+.testimonial_3,.testimonial_5{
+    background-color: var(--BG3);
+}
+.testimonial_4{
+    background-color: var(--BG4);
+}
+
+
+.name span{
+    font-size: var(--FS);
+    color:hsla(0, 0%, 95%, 0.329);
+    
+}
+
+.testimonial_3 .testimony,
+.testimonial_5 .testimony{
+    color: hsla(217, 30%, 14%, 0.868);
+}
+.testimonial_3 .story,
+.testimonial_5 .story{
+    color: hsla(217, 30%, 14%, 0.826);
+}
+.testimonial_3 .name,
+.testimonial_5 .name{
+    color: hsla(217, 30%, 14%, 0.732);
+}
+.testimonial_3 span,
+.testimonial_5 span{
+color: hsla(217, 30%, 14%, 0.312);
+}
+
+.testimony{
+    font-weight:700;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.754);
+    letter-spacing: 1px;
+}
+
+
+.story{
+    color:hsla(0, 0%, 95%, 0.455) ;
+    font-weight:500;
+    line-height: 1.2rem;
+}
+
+.name{
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: 700;
+}
+
+.bg{
+    position:absolute;
+    right:50px;
+    top: 0px;
+    z-index: 0;
+}
+
+.details,.testimony{
+    display: flex;
+    width: 100%;
+    gap:0.7rem;
+    z-index: 1;
+}
+
+.details img{
+    border-radius: 100%;
+    width: 15%;
+    max-width: 45px;
+}
+.testimonial_1 .details img{
+    border: 3px solid hsla(287, 95%, 84%, 0.285);
+}
+.testimonial_2 .details img{
+    border: 3px solid hsla(0, 0%, 32%, 0.285);
+}
+.testimonial_3 .details img{
+    border: 3px solid hsl(0, 0%, 100%);
+}
+.testimonial_4 .details img{
+    border: 3px solid hsl(287, 100%, 69%);
+}
+.testimonial_5 .details img{
+    border: 3px solid hsl(0, 0%, 100%);
+}
+
+@media screen and (width > 900px) {
+
+  
+    .testimonial_1{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .testimonial_2{
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    .testimonial_3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .testimonial_4{
+        grid-column: 2/5;
+        grid-row: 2/3;
+    }
+    .testimonial_5{
+        grid-column: 5/6;
+        grid-row: 1/3;
+    }
+
+    .container{
+        padding: 3rem;
+    }
+    
+}
+@media screen and (width < 915px){
+    .story{
+        font-size: 14px;
+    }
+    .testimony{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width:600px) {
+
+
+    .story{
+        font-size: 14px;
+    }
+    .testimony{
+        font-size: 16px;
+    }
+
+
+    .testimonial_1{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .testimonial_4{
+        grid-column: 3/6;
+        grid-row: 1/2;
+    }
+    .testimonial_3{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    
+    .testimonial_2{
+        grid-column: 3/6;
+        grid-row: 2/3;
+    }
+    .testimonial_5{
+        grid-column: 1/6;
+        grid-row: 3/4;
+    }
+
+    .container{
+        padding: 3rem;
+    }
+    
+}
+
+@media screen and (width >600px){
+
+    .child{
+        place-content: flex-start;
+    }
+
+    .testimonial_1 .details img, .testimonial_4 .details img{
+      max-width: 50px;
+      min-width: 45px;
+    }
+ 
+    .testimonial_5 .details img{
+     min-width: 40px;
+     width: 25%;
+    }
+
+    .testimonial_5 .details img{
+        width: 10%;
+    }
+    .testimonial_2 .details img{
+        width: 20%;
+    }
+    .testimonial_3 .details img{
+    width: 20%;
+    }
+    .testimonial_2 .details img{
+        width: 15%;
+    }
+
+}
+
+    
+
+
+

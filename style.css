@@ -227,14 +227,14 @@ color: hsla(217, 30%, 14%, 0.312);
     .testimonial_5 .details img{
         width: 10%;
     }
-    .testimonial_2 .details img{
-        width: 20%;
-    }
+
     .testimonial_3 .details img{
     width: 20%;
+    min-width: 40px;
     }
     .testimonial_2 .details img{
         width: 15%;
+        min-width: 40px;
     }
 
 }
